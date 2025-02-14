@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Nutrition Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="jpeg" href="icon.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <input type="text" id="food-search" placeholder="Search for food...">
+        <select id="food-select"></select>
+        <button id="add-button">Add to List</button>
+    </div>
+    <div id="nutrition-info"></div>
+
+    <div id="total-nutrition-info">
+        <h3>Total Nutrition</h3>
+        <p><strong>Calories:</strong> <span id="total-calories">0</span> kcal</p>
+        <p><strong>Protein:</strong> <span id="total-protein">0</span> g </p>
+        <p><strong>Fat:</strong> <span id="total-fat">0</span> g</p>
+        <p><strong>Carbohydrates:</strong> <span id="total-carbs">0</span> g</p>
+    </div>
+    <div id="added-items">
+        <h3>Added Items</h3>
+        <ul id="items-list"></ul>
+    </div>
+    <div id="calorie-calculator">
+        <h1>Calorie Calculator:</h1>
+        <input type="number" id="weight" placeholder="Enter Weight kg">
+        <input type="number" id="height" placeholder="Enter height cm">
+        <input type="number" id="age" placeholder="Enter age">
+        <select id="gen">
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select>
+        <select id="act"> 
+            <option value="sedentry">Sedentry</option>
+            <option value="light">Light Activity</option>
+            <option value="moderate">Moderate Activity</option>
+            <option value="veryactive">Very Active</option>
+            <option value="insane">Athlete</option>
+        </select>
+        <button id="calc">Calculate</button>
+        <div id="calrequiement">Daily Calorie Requiement:</div>
+        <div id="prorequiement">Advised Minimum Protein:</div>
+    </div>
+    <div id="nutrition-chart">
+        <canvas id="nutritionChart" width="400" height="400"></canvas>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
